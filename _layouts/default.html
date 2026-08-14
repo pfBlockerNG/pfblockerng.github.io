@@ -45,6 +45,7 @@
     <aside class="docs-nav" aria-label="Documentation">
       <p class="nav-label">Get started</p>
       <a{% if page.nav == 'introduction' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/introduction/' | relative_url }}">Introduction</a>
+      <a{% if page.nav == 'installation' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/installation/' | relative_url }}">Installation</a>
       <a{% if page.nav == 'general-setup' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/general-setup/' | relative_url }}">General setup</a>
       <a{% if page.nav == 'setting-up-lists' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/setting-up-lists/' | relative_url }}">Setting up lists</a>
 
@@ -58,7 +59,6 @@
 
       <p class="nav-label">Elsewhere</p>
       <a href="https://pfblockerng.github.io/pkg">Package repository ↗</a>
-      <a href="https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html">Netgate guide ↗</a>
     </aside>
     <main class="docs-main" id="main-content">
       <nav class="breadcrumbs" aria-label="Breadcrumb">
@@ -81,6 +81,7 @@
   <footer class="site-footer">
     <div><strong>pfBlockerNG</strong><span>IP and DNS blocking for pfSense</span></div>
     <nav aria-label="Footer">
+      <a href="https://www.reddit.com/r/pfBlockerNG/">Community</a>
       <a href="https://github.com/pfBlockerNG/pfBlockerNG">Repository</a>
       <a href="https://github.com/pfBlockerNG/pfBlockerNG/releases">Releases</a>
       <a href="https://github.com/pfBlockerNG/pfBlockerNG/blob/devel/LICENSE">Apache 2.0</a>

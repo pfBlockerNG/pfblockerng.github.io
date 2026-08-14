@@ -408,7 +408,7 @@ pre code { padding: 0; background: transparent; color: inherit; }
   gap: 2rem;
   padding: 2.5rem clamp(1rem, 4vw, 4rem);
   border-top: 1px solid var(--line);
-  background: var(--ink);
+  background: #1b1a1d;
   color: #f5f3ef;
 }
 

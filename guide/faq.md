@@ -64,6 +64,7 @@ firewall and device configuration rather than assuming a domain list captures ev
 
 ## Where should I ask for help?
 
+- Ask usage and configuration questions in the [pfBlockerNG subreddit](https://www.reddit.com/r/pfBlockerNG/).
 - Search and report package defects in the [pfBlockerNG repository](https://github.com/pfBlockerNG/pfBlockerNG/issues).
 - Browse project repositories in the [pfBlockerNG organization](https://github.com/pfBlockerNG).
 - Use the [Netgate Forum](https://forum.netgate.com/category/62/pfblockerng) for community configuration discussion.

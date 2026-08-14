@@ -1,7 +1,7 @@
 ---
 layout: default
 title: General setup
-description: Install pfBlockerNG, establish safe defaults, apply the first configuration, and verify enforcement.
+description: Establish safe defaults, apply the first configuration, and verify enforcement after installation.
 section: Get started
 nav: general-setup
 permalink: /guide/general-setup/
@@ -16,14 +16,8 @@ than a large policy imported all at once.
 2. Confirm clients use the pfSense DNS Resolver if you plan to enable DNSBL.
 3. Know which interfaces are external and which carry client traffic.
 
-## Install the package
-
-For the current project-built packages, channels, and copy-ready commands, use the
-[pfBlockerNG package repository](https://pfblockerng.github.io/pkg). Stable and development
-builds are also available from **System ▸ Package Manager ▸ Available Packages** in the
-pfSense catalog.
-
-After installation, open **Firewall ▸ pfBlockerNG**.
+Before continuing, [install pfBlockerNG]({{ '/guide/installation/' | relative_url }}) from
+the project package repository. Then open **Firewall ▸ pfBlockerNG**.
 
 ## Run the wizard
 

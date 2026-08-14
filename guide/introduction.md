@@ -45,11 +45,12 @@ paths:
 
 ## Where to start
 
-1. Follow [General setup]({{ '/guide/general-setup/' | relative_url }}) and run the wizard
-   if this is a new installation.
-2. Add one small, reputable source using [Setting up lists]({{ '/guide/setting-up-lists/' | relative_url }}).
-3. Apply the change from **Firewall ▸ pfBlockerNG ▸ Update**.
-4. Verify the result before adding more feeds.
+1. [Install pfBlockerNG]({{ '/guide/installation/' | relative_url }}) from the project
+   package repository.
+2. Follow [General setup]({{ '/guide/general-setup/' | relative_url }}) and run the wizard.
+3. Add one small, reputable source using [Setting up lists]({{ '/guide/setting-up-lists/' | relative_url }}).
+4. Apply the change from **Firewall ▸ pfBlockerNG ▸ Update**.
+5. Verify the result before adding more feeds.
 
 > **Important:** Saving a group marks a pending change; it does not immediately rebuild
 > policy. Scheduled processing or a manual Update run applies it.

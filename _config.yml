@@ -1,0 +1,8 @@
+title: pfBlockerNG Documentation
+description: Official user documentation for pfBlockerNG on pfSense
+url: https://pfblockerng.github.io
+baseurl: ""
+markdown: kramdown
+permalink: pretty
+exclude:
+  - README.md

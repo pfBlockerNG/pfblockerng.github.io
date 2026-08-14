@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" content="#151518">
+  <title>{% if page.home %}pfBlockerNG — IP and DNS blocking for pfSense{% else %}{{ page.title }} | {{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="{{ page.title | default: site.title | escape }}">
+  <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
+  <meta property="og:image" content="{{ '/assets/logo.png' | absolute_url }}">
+  <link rel="icon" href="{{ '/assets/logo.svg' | relative_url }}" type="image/svg+xml">
+  <link rel="stylesheet" href="{{ '/assets/site.css' | relative_url }}">
+</head>
+<body{% if page.home %} class="home"{% endif %}>
+  <a class="skip-link" href="#main-content">Skip to content</a>
+  <header class="site-header">
+    <a class="brand" href="{{ '/' | relative_url }}" aria-label="pfBlockerNG home">
+      <img src="{{ '/assets/logo.svg' | relative_url }}" alt="" width="34" height="34">
+      <span>pfBlockerNG</span>
+    </a>
+    <nav class="header-nav" aria-label="Primary">
+      <a href="{{ '/guide/introduction/' | relative_url }}">Documentation</a>
+      <a href="https://pfblockerng.github.io/pkg">Packages</a>
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG">GitHub</a>
+      <a href="https://github.com/pfBlockerNG">Organization</a>
+    </nav>
+    <details class="mobile-nav">
+      <summary aria-label="Open navigation">Menu</summary>
+      <nav aria-label="Mobile">
+        <a href="{{ '/guide/introduction/' | relative_url }}">Documentation</a>
+        <a href="https://pfblockerng.github.io/pkg">Packages</a>
+        <a href="https://github.com/pfBlockerNG/pfBlockerNG">GitHub</a>
+        <a href="https://github.com/pfBlockerNG">Organization</a>
+      </nav>
+    </details>
+  </header>
+
+  {% if page.home %}
+    {{ content }}
+  {% else %}
+  <div class="docs-shell">
+    <aside class="docs-nav" aria-label="Documentation">
+      <p class="nav-label">Get started</p>
+      <a{% if page.nav == 'introduction' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/introduction/' | relative_url }}">Introduction</a>
+      <a{% if page.nav == 'general-setup' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/general-setup/' | relative_url }}">General setup</a>
+      <a{% if page.nav == 'setting-up-lists' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/setting-up-lists/' | relative_url }}">Setting up lists</a>
+
+      <p class="nav-label">Components</p>
+      <a{% if page.nav == 'ip-blocking' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/ip-blocking/' | relative_url }}">IP blocking</a>
+      <a{% if page.nav == 'dnsbl' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/dnsbl/' | relative_url }}">DNSBL</a>
+
+      <p class="nav-label">Operate</p>
+      <a{% if page.nav == 'operations' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/operations/' | relative_url }}">Operations</a>
+      <a{% if page.nav == 'faq' %} class="active" aria-current="page"{% endif %} href="{{ '/guide/faq/' | relative_url }}">FAQ</a>
+
+      <p class="nav-label">Elsewhere</p>
+      <a href="https://pfblockerng.github.io/pkg">Package repository ↗</a>
+      <a href="https://docs.netgate.com/pfsense/en/latest/packages/pfblocker.html">Netgate guide ↗</a>
+    </aside>
+    <main class="docs-main" id="main-content">
+      <nav class="breadcrumbs" aria-label="Breadcrumb">
+        <a href="{{ '/' | relative_url }}">Home</a><span>/</span><span>Documentation</span>
+      </nav>
+      <article class="prose">
+        <p class="section-kicker">{{ page.section | default: 'Documentation' }}</p>
+        <h1>{{ page.title }}</h1>
+        {% if page.description %}<p class="page-lede">{{ page.description }}</p>{% endif %}
+        {{ content }}
+      </article>
+      <nav class="page-footer-nav" aria-label="Page resources">
+        <a href="https://github.com/pfBlockerNG/pfBlockerNG/issues/new/choose">Report a documentation problem</a>
+        <a href="https://github.com/pfBlockerNG/pfblockerng.github.io/blob/main/{{ page.path }}">Edit this page on GitHub</a>
+      </nav>
+    </main>
+  </div>
+  {% endif %}
+
+  <footer class="site-footer">
+    <div><strong>pfBlockerNG</strong><span>IP and DNS blocking for pfSense</span></div>
+    <nav aria-label="Footer">
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG">Repository</a>
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG/releases">Releases</a>
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG/blob/devel/LICENSE">Apache 2.0</a>
+    </nav>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,80 @@
+---
+layout: default
+home: true
+title: pfBlockerNG
+description: IP and DNS blocking for pfSense CE and Plus.
+---
+<main id="main-content">
+  <section class="hero">
+    <p class="eyebrow">pfSense package · IP + DNS policy</p>
+    <h1>Block at the firewall. Block at the resolver.</h1>
+    <p class="hero-lede">pfBlockerNG turns trusted IP and domain feeds into live pfSense policy, with reports, safe exceptions, and one place to operate both enforcement paths.</p>
+    <div class="hero-actions">
+      <a class="button primary" href="{{ '/guide/general-setup/' | relative_url }}">Start with basic setup</a>
+      <a class="button secondary" href="https://pfblockerng.github.io/pkg">Install from our repository</a>
+      <a class="button secondary" href="https://github.com/pfBlockerNG/pfBlockerNG">View source</a>
+    </div>
+    <div class="project-badges" aria-label="Project status">
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG/stargazers"><img src="https://img.shields.io/github/stars/pfBlockerNG/pfBlockerNG?style=flat-square&amp;label=Stars&amp;logo=github" alt="GitHub star count"></a>
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG/forks"><img src="https://img.shields.io/github/forks/pfBlockerNG/pfBlockerNG?style=flat-square&amp;label=Forks&amp;logo=github" alt="GitHub fork count"></a>
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG/releases"><img src="https://img.shields.io/github/v/release/pfBlockerNG/pfBlockerNG?style=flat-square&amp;label=Release" alt="Latest release"></a>
+      <a href="https://github.com/pfBlockerNG/pfBlockerNG/blob/devel/LICENSE"><img src="https://img.shields.io/github/license/pfBlockerNG/pfBlockerNG?style=flat-square" alt="Apache 2.0 license"></a>
+    </div>
+  </section>
+
+  <section class="home-section" id="components">
+    <div class="section-inner">
+      <div class="section-heading">
+        <div><p class="eyebrow">§ 01 · Two components</p><h2>One policy surface.</h2></div>
+        <p>IP blocking and DNSBL solve different problems. Use either component independently, or combine them for network- and name-level enforcement.</p>
+      </div>
+      <div class="component-grid">
+        <article class="component-card">
+          <span class="number">01 / IP</span>
+          <h3>IP blocking</h3>
+          <p>Build IPv4 and IPv6 aliases from feeds, GeoIP data, and custom entries. Use generated rules or reference the aliases from your own pfSense rules.</p>
+        </article>
+        <article class="component-card">
+          <span class="number">02 / DNS</span>
+          <h3>DNSBL</h3>
+          <p>Evaluate domain lists in Unbound, including Adblock Plus and EasyList rules, with selectable response modes and per-query reporting.</p>
+        </article>
+        <article class="component-card">
+          <span class="number">03 / OPERATE</span>
+          <h3>Reports and control</h3>
+          <p>Trace blocked traffic and names, add precise exceptions, inspect update logs, and keep the last good data when a feed download fails.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section" id="model">
+    <div class="section-inner">
+      <div class="section-heading">
+        <div><p class="eyebrow">§ 02 · Operating model</p><h2>Feeds become native policy.</h2></div>
+        <p>pfBlockerNG downloads, validates, normalizes, and publishes data into the pfSense services already responsible for enforcement.</p>
+      </div>
+      <div class="flow" aria-label="pfBlockerNG processing flow">
+        <div class="flow-step"><strong>Sources</strong><span>IP feeds, domain feeds, GeoIP, custom entries</span></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><strong>pfBlockerNG</strong><span>Download, parse, deduplicate, aggregate, prioritize</span></div>
+        <div class="flow-arrow" aria-hidden="true">→</div>
+        <div class="flow-step"><strong>pfSense</strong><span>pf aliases and rules, Unbound DNSBL, reports and logs</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="home-section" id="resources">
+    <div class="section-inner">
+      <div class="section-heading">
+        <div><p class="eyebrow">§ 03 · Start here</p><h2>Docs, builds, source.</h2></div>
+        <p>Choose the shortest path for what you need: configure the package, install a current build, inspect the project, or follow organization-wide work.</p>
+      </div>
+      <div class="resource-grid">
+        <a class="resource-card" href="{{ '/guide/introduction/' | relative_url }}"><h3>User documentation</h3><p>Purpose, basic setup, list actions, IP blocking, DNSBL, and daily operations.</p></a>
+        <a class="resource-card" href="https://pfblockerng.github.io/pkg"><h3>Package repository</h3><p>Current channels, supported pfSense releases, copy-ready install commands, and retained builds.</p></a>
+        <a class="resource-card" href="https://github.com/pfBlockerNG"><h3>GitHub organization</h3><p>Repositories, issues, releases, architecture work, and the people building pfBlockerNG.</p></a>
+      </div>
+    </div>
+  </section>
+</main>
